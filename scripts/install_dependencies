@@ -1,0 +1,18 @@
+#!/bin/bash
+apt install -y yum
+yum install -y httpd
+apt update
+apt install -y apache2
+apt install -y php
+apt install php libapache2-mod-php
+systemctl restart apache2
+systemctl status apache2
+yum install htop
+
+
+
+sudo apt install -y openjdk-8-jre-headless
+sudo apt install -y maven
+
+
+sudo apt-get install yum
