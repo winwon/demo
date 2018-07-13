@@ -1,4 +1,4 @@
-version: 0.0
+/home/ec2-userversion: 0.0
 os: linux
 files:
   - source: /Helloworld-0.0.1-SNAPSHOT.jar
