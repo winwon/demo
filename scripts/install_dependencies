@@ -8,4 +8,14 @@ sudo yum install -y htop
 #
 #sudo apt install -y openjdk-8-jre-headless
 sudo yum install -y jre
-sudo yum install -y maven
+#sudo yum install -y maven
+
+cd /opt/
+sudo wget http://mirror.vorboss.net/apache/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+sudo tar -zxvf apache-maven-3.5.4-bin.tar.gz
+sudo chown -R root:root apache-maven-3.5.4
+sudo ln -s /opt/apache-maven-3.5.4 /opt/apache-maven
+echo 'export PATH=$PATH:/opt/apache-maven/bin' | sudo tee -a /etc/profile
+source /etc/profile
+mvn --version
+sudo rm apache-maven-3.5.4-bin.tar.gz
